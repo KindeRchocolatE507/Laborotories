@@ -1,0 +1,81 @@
+kinder@kinder-507:~/Рабочий стол/lab$ mkdir directory
+kinder@kinder-507:~/Рабочий стол/lab$ cd directory
+kinder@kinder-507:~/Рабочий стол/lab/directory$ echo "Hello, world">file.txt|echo "Hello, Moskow">file1.txt|cat file.txt file1.txt >> file3
+kinder@kinder-507:~/Рабочий стол/lab/directory$ cmp -b file.txt file1.txt
+file.txt file1.txt различаются: байт 8, строка 1 равен  12 ^J 115 M
+kinder@kinder-507:~/Рабочий стол/lab/directory$ comm file.txt file1.txt
+	Hello, Moskow
+Hello, world
+kinder@kinder-507:~/Рабочий стол/lab/directory$ wc file.txt file1.txt
+ 1  2 13 file.txt
+ 1  2 14 file1.txt
+ 2  4 27 итого
+kinder@kinder-507:~/Рабочий стол/lab/directory$ diff -d --minimal file.txt file1.txt
+1c1
+< Hello, world
+---
+> Hello, Moskow
+kinder@kinder-507:~/Рабочий стол/lab/directory$ sort -f file.txt file1.txt
+Hello, Moskow
+Hello, world
+kinder@kinder-507:~/Рабочий стол/lab/directory$ tail -v file.txt file1.txt
+==> file.txt <==
+Hello, world
+
+==> file1.txt <==
+Hello, Moskow
+kinder@kinder-507:~/Рабочий стол/lab/directory$ echo "Hello"|tee -a file.txt file1.txt
+Hello
+kinder@kinder-507:~/Рабочий стол/lab/directory$ uniq -c file.txt
+      1 Hello, world
+      1 Hello
+kinder@kinder-507:~/Рабочий стол/lab/directory$ od file.txt file1.txt
+0000000 062510 066154 026157 073440 071157 062154 044012 066145
+0000020 067554 044012 066145 067554 020054 067515 065563 073557
+0000040 044012 066145 067554 000012
+0000047
+kinder@kinder-507:~/Рабочий стол/lab/directory$ sum file.txt file1.txt
+54968     1 file.txt
+48566     1 file1.txt
+kinder@kinder-507:~/Рабочий стол/lab/directory$ touch file3|echo "Hello, everyone!">file3
+kinder@kinder-507:~/Рабочий стол/lab/directory$ head file.txt file1.txt file3
+==> file.txt <==
+Hello, world
+Hello
+
+==> file1.txt <==
+Hello, Moskow
+Hello
+
+==> file3 <==
+Hello, everyone!
+kinder@kinder-507:~/Рабочий стол/lab/directory$ gzip -v file.txt|ls
+file.txt:	  5.3% -- replaced with file.txt.gz
+file1.txt  file3  file.txt.gz
+kinder@kinder-507:~/Рабочий стол/lab/directory$ gzip -d file.txt
+kinder@kinder-507:~/Рабочий стол/lab/directory$ bzip2 -v file1.txt
+  file1.txt:  0.339:1, 23.600 bits/byte, -195.00% saved, 20 in, 59 out.
+kinder@kinder-507:~/Рабочий стол/lab/directory$ bzip2 -d file1.txt.bz2
+kinder@kinder-507:~/Рабочий стол/lab/directory$ paste -s file.txt file1.txt file3
+Hello, world	Hello
+Hello, Moskow	Hello
+Hello, everyone!
+kinder@kinder-507:~/Рабочий стол/lab/directory$ du -c file.txt file1.txt file3
+4	file.txt
+4	file1.txt
+4	file3
+12	итого
+kinder@kinder-507:~/Рабочий стол/lab/directory$ df -a file.txt
+Файл.система   1K-блоков Использовано  Доступно Использовано% Cмонтировано в
+/dev/sda5      236418928      9332696 215007128            5% /
+kinder@kinder-507:~/Рабочий стол/lab/directory$ touch strange.doll|touch hmmm.classic|touch turtule.model|find -name '*.*l*'
+./turtule.model
+./strange.doll
+./hmmm.classic
+kinder@kinder-507:~/Рабочий стол/lab/directory$ touch file.txt file1.txt file3 file4 file5 file6 file7|echo "Hello">file.txt|echo "it's">file1.txt|echo " me">file3|echo "just">file4|echo "do">file5|echo "it ">file6|echo "!!!">file7|cat file.txt file1.txt file3 file4 file5 file6 file7 >> text|find -name "file*"|xargs -P 4 rm|split -b 5 text|find -name "tu*"|xargs -P 4 cat
+touch file.txt file1.txt file3 file4 file5 file6 file7|echo "Hello">file.txt|echo "it's">file1.txt|echo " me">file3|echo "just">file4|echo "do">file5|echo "it ">file6|echo "touch strange.doll|touch hmmm.classic|touch turtule.model|find -name '*.*l*'!">file7|cat file.txt file1.txt file3 file4 file5 file6 file7 >> text|find -name "file*"|xargs -P 4 rm|split -b 5 text|find -name "tu*"|xargs -P 4 cat
+kinder@kinder-507:~/Рабочий стол/lab/directory$ find -name "f*"|xargs -P 4 rm -rf
+kinder@kinder-507:~/Рабочий стол/lab/directory$ cd ..
+kinder@kinder-507:~/Рабочий стол/lab$ rm directory -r
+kinder@kinder-507:~/Рабочий стол/lab$ echo "lab 20 Puchkova"
+lab 20 Puchkova

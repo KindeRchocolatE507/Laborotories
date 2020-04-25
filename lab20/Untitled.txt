@@ -1,0 +1,28 @@
+mkdir directory
+cd directory
+echo "Hello, world">file.txt|echo "Hello, Moskow">file1.txt|cat file.txt file1.txt >> file3
+cmp -b file.txt file1.txt
+comm file.txt file1.txt
+wc file.txt file1.txt
+diff -d --minimal file.txt file1.txt
+sort -f file.txt file1.txt
+tail -v file.txt file1.txt
+echo "Hello"|tee -a file.txt file1.txt
+uniq -c file.txt
+od file.txt file1.txt
+sum file.txt file1.txt
+touch file3|echo "Hello, everyone!">file3
+head file.txt file1.txt file3
+gzip -v file.txt|ls
+gzip -d file.txt
+bzip2 -v file1.txt
+bzip2 -d file1.txt.bz2
+paste -s file.txt file1.txt file3
+du -c file.txt file1.txt file3
+df -a file.txt
+touch strange.doll|touch hmmm.classic|touch turtule.model|find -name '*.*l*'
+touch file.txt file1.txt file3 file4 file5 file6 file7|echo "Hello">file.txt|echo "it's">file1.txt|echo " me">file3|echo "just">file4|echo "do">file5|echo "it ">file6|echo "!!!">file7|cat file.txt file1.txt file3 file4 file5 file6 file7 >> text|find -name "file*"|xargs -P 4 rm|split -b 5 text|find -name "tu*"|xargs -P 4 cat
+find -name "f*"|xargs -P 4 rm -rf
+cd ..
+rm directory -r
+echo "lab 20 Puchkova"
