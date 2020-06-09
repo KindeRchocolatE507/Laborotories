@@ -1,0 +1,9 @@
+
+Сначала
+gcc menu.c individual_function/scholarship_female_students.c output/output.c re_builder/re_builder.c -g 
+и
+ gcc parse/enter.c writer/writer.c re_builder/re_builder.c -o enter.exe
+
+ enter.exe - это ввод базы данных
+ a.exe -f - это вывод бд
+ a.exe -p - это своя функция
