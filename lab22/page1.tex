@@ -1,0 +1,63 @@
+\footnotesize
+\fancyhead[C]{\itГлава 10}
+\linespread{1}
+\normalsize
+Заключение от $n$ к $n+1$: в силу теорем 111, 107 и 172, имеем
+\begin{center}
+$(fg)^{(n+1)}=((fg)^{(n)})'=$
+\end{center}
+\begin{left}
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;$=\Big(\sum\limits^n_{\nu=0}\Big(\frac{n}{\nu}\Big)f^{(n-\nu)}g^{(\nu)}\Big)'=\sum\limits^n_{\nu=0}\Big(\frac{n}{\nu}\Big)(f^{(n-\nu)}g^{(\nu)})'=$
+\end{left}
+\newline
+\newline
+\begin{left}
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;$=\sum\limits^n_{\nu=0}\Big(\frac{n}{\nu}\Big)(f^{(n-\nu+1)}g^{(\nu)}+f^{(n-\nu)}g^{(\nu+1)})=$
+\end{left}
+\newline
+\newline
+\begin{left}
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;$=\sum\limits^n_{\nu=0}\Big(\frac{n}{\nu}\Big)f^{(n-\nu+1)}g^{(\nu)}+\sum\limits^n_{\nu=0}\Big(\frac{n}{\nu}\Big)f^{(n-\nu)}g^{(\nu+1)}=$
+\end{left}
+\newline
+\newline
+\begin{left}
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;$=\sum\limits^n_{\nu=0}\Big(\frac{n}{\nu}\Big)f^{(n-\nu+1)}g^{(\nu)}+\sum\limits^{n+1}_{\nu=1}\Big(\frac{n}{\nu-1}\Big)f^{(n-\nu+1)}g^{(\nu)}=$
+\newline
+\newline
+$=f^{(n+1)}g^{(0)}+\sum\limits^n_{\nu=1}\Big(\Big(\frac{n}{\nu}\Big)+\Big(\frac{n}{\nu-1}\Big)\Big)f^{(n+1-\nu)}g^{(\nu)}+f^{(0)}g^{(n+1)}$
+\end{left}
+\newline
+\newline
+(последняя $\sum$ в случае $n=0$ означает 0)
+\newline
+\newline
+\begin{left}
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;$=\sum\limits^{n+1}_{\nu=0}\Big(\frac{n+1}{\nu}\Big)f^{(n+1-\nu)}g^{(\nu)}$.
+\end{left}
+\newline
+\newline
+\begin{left}\;\;\;\;\small{\textsf{\textbf{\textsc{Пример.}}}}\end{left}
+\begin{center}
+$(fg)'''=f'''g+3f''g'+3f'g''+fg''',$
+\end{center}
+если $f'''\,$ и $\,g'''$ существуют.
+\newline
+\newline
+\begin{left}\;\;\;\;\small{\textsf{\textbf{\textsc{Теорема 174.}}}}\end{left}
+\begin{center}
+$(f(cx))^{(n)}=c^nf^{(n)}(cx),$
+\end{center}
+\textit{если правая часть имеет смысл.}
+\par\text{Д\thispace\thinspaceо\thispace\thinspaceк\thispace\thinspaceа\thispace\thinspaceз\thispace\thinspaceа\thispace\thinspaceт\thispace\thinspaceе\thispace\thinspaceл\thispace\thinspaceь\thispace\thinspaceс\thispace\thinspaceт\thispace\thinspaceв\thispace\thinspaceо.}
+$\;\,\,$Для$\;\,\,$ $n=0$ --- ясно.$\;\,\,$Заключение$\;\,\,$ от $n$ к $n+1$: по теореме 101,
+\[
+(f^{(n)}(cx))'=cf^{(n+1)}(cx),
+\]
+следовательно,
+\[
+c^{n+1}f^{(n+1)}(cx)=c^n(f^{(n)}(cx))'=(c^nf^{(n)}(cx))'=
+
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\,=((f(cx))^{(n)})'=(f(cx))^{(n+1)},
+\]
+\newpage

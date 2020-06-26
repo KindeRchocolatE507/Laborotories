@@ -1,0 +1,54 @@
+\footnotesize
+\setcounter{page}{141}
+\fancyhead[C]{\itПроизводные высших порядков}
+\fancyhead[R]{\sl141}
+\linespread{1}
+\normalsize
+$\;\;\;\;$\small{\textsf{\textbf{\textsc{Теорема 175.}}}}
+\[
+(f(x+c))^{(n)}=f^{(n)}(x+c),
+\]
+\textit{если правая часть имеет смысл.}
+
+$\;\;\;\;$\text{Д\thispace\thinspaceо\thispace\thinspaceк\thispace\thinspaceа\thispace\thinspaceз\thispace\thinspaceа\thispace\thinspaceт\thispace\thinspaceе\thispace\thinspaceл\thispace\thinspaceь\thispace\thinspaceс\thispace\thinspaceт\thispace\thinspaceв\thispace\thinspaceо.}
+$\;$Для $\;n=0$ --- ясно. Заключение от
+\newline $n$ к $n+1$: по теореме 101,
+\begin{center}
+${f}^{(n+1)}(x+c)=(f^{(n)}(x+c))'=((f(x+c))^{(n)})'=$
+\newline
+$=({f}(x+c))^{(n+1)}$.\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;
+\end{center}
+\newline
+\begin{left}\;\;\;\;\small{\textsf{\textbf{\textsc{Теорема 176.}}}}\end{left} \textit{$\;\,$Пусть $h>0$.$\;\;\;$Пусть $\;\;f^{(n-1)}\;(x)\;$ непрерыв-}
+\newline
+\textit{на$\;\;$при$\;\;\;0$ $\leqslant$ $x$ $\leqslant$ $h\;$ и $\;f^{(n)}(x)\;$ существует$\;\;\;$при $\;\;0<x<h$.}
+\newline
+\textit{Положим}
+\newline
+\begin{left}
+    $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\Phi=f(h)\text{-}\sum\limits^{n-1}_{\nu=0}\frac{f^{\nu}(0)}{\nu!}h^{\nu}$
+\end{left}
+\newline
+\newline
+\textit{(число,$\;$ не$\;$ зависящее$\;$ от $\;x$).$\,\;$ Тогда$\,\;$ существует $\,\;x\;\,$ такое,$\,\,$ что}
+\begin{center}
+    $
+0<x<h,\;\;\;\Phi=\frac{h^n}{n!}f^{(n)}(x).
+$
+\end{center}
+\par\text{Д\thispace\thinspaceо\thispace\thinspaceк\thispace\thinspaceа\thispace\thinspaceз\thispace\thinspaceа\thispace\thinspaceт\thispace\thinspaceе\thispace\thinspaceл\thispace\thinspaceь\thispace\thinspaceс\thispace\thinspaceт\thispace\thinspaceв\thispace\thinspaceо.}$\;\;\;$Положим
+\begin{center}
+$(1)\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;g(x)=f(x)-\sum\limits_{\nu=0}^{n-1}\frac{f^{(\nu)}(0)}{\nu!}x^\nu-\Phi \frac{x^n}{h^n}.\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$
+\end{center}
+Тогда,$\;$ по$\;$ теоремам$\;$ 167$\;$ и$\;$ 170,$\;$ для$\;$ целых $\;m\;$ с $\;0\leqslant m<n$
+\newline
+и$\;$ всех $\;x\;$ с $\;0\leqslant x\leqslant h\;$ имеем
+\begin{center}$g^{(m)}(x)=f^{(m)}(x)-\sum\limits_{\nu=m}^{n-1}\frac{f^{(v)}(0)}{\nu!}\Big(\frac{\nu}{m}\Big)m!\;x^{\nu-m}-\frac{\Phi}{h^{n}}\Big(\frac{n}{m}\Big)m!x^{n-m}=$\end{center}
+\begin{center}$(2)\;\;\;\;\;\;\;\;\;\;\;\;=f^{(m)}(x)-\sum\limits_{\nu=m}^{n-1}\frac{f^{(\nu)}(0)}{(\nu-m)!}x^{\nu-m}-\Phi\frac{n!}{(n-m)!}\frac{x^{n-m}}{h^n}.\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$\end{center}
+
+При $m=n-1$ равенство (2) сводится к
+\begin{center}$g^{(n-1)}(x)=f^{(n-1)}(x)-f^{(n-1)}(0)-\Phi\frac{n!}{h_n}x$\end{center}
+и для $0<x<h$ дает дальше
+\begin{center}
+$(3)\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;g^{(n)}(x)=f^{(n)}(x)-\Phi\frac{n!}{h^n}.\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$
+\end{center}
